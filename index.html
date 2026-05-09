@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LUMIÈRE — Fine Jewellery</title>
+  <meta name="description" content="Handcrafted fine jewellery for the modern woman. Timeless pieces, exceptional quality." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       ANNOUNCEMENT BAR
+       Tekst: aanpassen naar jouw promotie / gratis verzending etc.
+  ============================================================ -->
+  <div class="announcement-bar">
+    <div class="announcement-inner">
+      <span>Gratis verzending bij bestellingen boven €75</span>
+      <span class="announcement-divider">·</span>
+      <span>Handgemaakt in Nederland</span>
+      <span class="announcement-divider">·</span>
+      <a href="#collecties" class="announcement-link">Bekijk nieuwe collectie →</a>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       NAVIGATION
+       Logo staat gecentreerd, menu links/rechts (stijl Tiffany)
+  ============================================================ -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-container">
+
+      <!-- Linker navigatie -->
+      <ul class="nav-links nav-left">
+        <li><a href="#collecties" class="nav-link">Collecties</a></li>
+        <li><a href="#sieraden" class="nav-link">Sieraden</a></li>
+        <li><a href="#cadeaus" class="nav-link">Cadeaus</a></li>
+      </ul>
+
+      <!-- Logo (gecentreerd) -->
+      <a href="/" class="nav-logo">
+        <span class="logo-text">LUMIÈRE</span>
+        <span class="logo-sub">Fine Jewellery</span>
+      </a>
+
+      <!-- Rechter navigatie -->
+      <ul class="nav-links nav-right">
+        <li><a href="#over-ons" class="nav-link">Over ons</a></li>
+        <li>
+          <button class="nav-icon-btn" aria-label="Zoeken" id="search-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <a href="#" class="nav-icon-btn" aria-label="Winkelwagen" id="cart-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>
+            </svg>
+            <span class="cart-count" id="cart-count">0</span>
+          </a>
+        </li>
+      </ul>
+
+    </nav>
+
+    <!-- Mobile menu toggle -->
+    <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu openen">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- Mobile menu overlay -->
+    <div class="mobile-menu" id="mobile-menu">
+      <ul class="mobile-nav-links">
+        <li><a href="#collecties">Collecties</a></li>
+        <li><a href="#sieraden">Sieraden</a></li>
+        <li><a href="#cadeaus">Cadeaus</a></li>
+        <li><a href="#over-ons">Over ons</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       HERO SECTIE — VIDEO PLACEHOLDER
+       ─────────────────────────────────────────────────────────────
+       HOE VIDEO TOEVOEGEN:
+       1. Zet je video bestand (MP4 formaat, minimaal 1920x1080px)
+          in de map: /assets/video/hero.mp4
+       2. Verwijder het div.video-placeholder element hieronder
+       3. Uncomment het <video> element hieronder
+       4. Aanbevolen: ook een .webm versie voor betere browser support
+       ─────────────────────────────────────────────────────────────
+       TECHNISCHE SPECS VIDEO:
+       - Formaat: MP4 (H.264) + WebM als fallback
+       - Resolutie: minimaal 1920×1080px (liefst 4K)
+       - Duur: 15–30 seconden, loopt automatisch
+       - Geen geluid (autoplay werkt alleen zonder audio)
+       - Inhoud: sieraad close-up, model die sieraad draagt, atelier
+  ============================================================ -->
+  <section class="hero" id="hero">
+
+    <!-- VIDEO PLACEHOLDER — verwijder dit blok als je een video hebt -->
+    <div class="video-placeholder">
+      <div class="video-placeholder-inner">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+          <polygon points="5 3 19 12 5 21 5 3"/>
+        </svg>
+        <p>Hero video</p>
+        <span>Zie instructies in de HTML — /assets/video/hero.mp4</span>
+      </div>
+    </div>
+
+    <!-- VIDEO ELEMENT — uncomment dit als video klaar is:
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="assets/video/hero.webm" type="video/webm" />
+      <source src="assets/video/hero.mp4" type="video/mp4" />
+    </video>
+    -->
+
+    <!-- Hero overlay voor leesbaarheid tekst -->
+    <div class="hero-overlay"></div>
+
+    <!-- Hero content -->
+    <div class="hero-content">
+      <p class="hero-eyebrow fade-up">Nieuwe Collectie 2025</p>
+      <h1 class="hero-title fade-up delay-1">
+        Sieraden die<br />
+        <em>jouw verhaal</em><br />
+        vertellen
+      </h1>
+      <p class="hero-subtitle fade-up delay-2">
+        Handgemaakt vakmanschap. Tijdloze schoonheid.
+      </p>
+      <div class="hero-buttons fade-up delay-3">
+        <a href="#collecties" class="btn btn-primary">Ontdek de collectie</a>
+        <a href="#over-ons" class="btn btn-secondary">Ons verhaal</a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       COLLECTIES GRID
+  ============================================================ -->
+  <section class="collections-section" id="collecties">
+    <div class="section-header fade-up">
+      <p class="section-eyebrow">Onze collecties</p>
+      <h2 class="section-title">Elk stuk vertelt een verhaal</h2>
+    </div>
+
+    <div class="collections-grid">
+
+      <!-- Collectie 1 -->
+      <article class="collection-card fade-up">
+        <!-- IMAGE PLACEHOLDER
+             Voeg toe: assets/images/collectie-ringen.jpg (minimaal 800×1000px)
+        -->
+        <div class="collection-img-wrap">
+          <div class="img-placeholder">
+            <span>Afbeelding: ringen collectie<br/>(800×1000px)</span>
+          </div>
+          <!-- <img src="assets/images/collectie-ringen.jpg" alt="Ringen collectie" loading="lazy" /> -->
+          <div class="collection-img-overlay"></div>
+        </div>
+        <div class="collection-info">
+          <h3 class="collection-name">Ringen</h3>
+          <p class="collection-desc">Van delicate stapelringen tot statement stukken</p>
+          <a href="#ringen" class="collection-link">Bekijk collectie →</a>
+        </div>
+      </article>
+
+      <!-- Collectie 2 — groot formaat -->
+      <article class="collection-card collection-card--large fade-up delay-1">
+        <div class="collection-img-wrap">
+          <div class="img-placeholder">
+            <span>Afbeelding: kettingen collectie<br/>(800×1200px)</span>
+          </div>
+          <!-- <img src="assets/images/collectie-kettingen.jpg" alt="Kettingen collectie" loading="lazy" /> -->
+          <div class="collection-img-overlay"></div>
+        </div>
+        <div class="collection-info">
+          <h3 class="collection-name">Kettingen</h3>
+          <p class="collection-desc">Fijne gouden kettingen voor elke gelegenheid</p>
+          <a href="#kettingen" class="collection-link">Bekijk collectie →</a>
+        </div>
+      </article>
+
+      <!-- Collectie 3 -->
+      <article class="collection-card fade-up delay-2">
+        <div class="collection-img-wrap">
+          <div class="img-placeholder">
+            <span>Afbeelding: oorbellen collectie<br/>(800×1000px)</span>
+          </div>
+          <!-- <img src="assets/images/collectie-oorbellen.jpg" alt="Oorbellen collectie" loading="lazy" /> -->
+          <div class="collection-img-overlay"></div>
+        </div>
+        <div class="collection-info">
+          <h3 class="collection-name">Oorbellen</h3>
+          <p class="collection-desc">Subtiele studs tot elegante hangertjes</p>
+          <a href="#oorbellen" class="collection-link">Bekijk collectie →</a>
+        </div>
+      </article>
+
+      <!-- Collectie 4 -->
+      <article class="collection-card fade-up delay-3">
+        <div class="collection-img-wrap">
+          <div class="img-placeholder">
+            <span>Afbeelding: armbanden collectie<br/>(800×1000px)</span>
+          </div>
+          <!-- <img src="assets/images/collectie-armbanden.jpg" alt="Armbanden collectie" loading="lazy" /> -->
+          <div class="collection-img-overlay"></div>
+        </div>
+        <div class="collection-info">
+          <h3 class="collection-name">Armbanden</h3>
+          <p class="collection-desc">Tennisarmbanden, bangles en delicate chains</p>
+          <a href="#armbanden" class="collection-link">Bekijk collectie →</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MARQUEE / LOPENDE TEKST BANNER (zoals Tiffany)
+  ============================================================ -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <span>Handgemaakt</span>
+      <span class="marquee-dot">◆</span>
+      <span>14 karaat goud</span>
+      <span class="marquee-dot">◆</span>
+      <span>Gecertificeerde diamanten</span>
+      <span class="marquee-dot">◆</span>
+      <span>Gratis cadeau verpakking</span>
+      <span class="marquee-dot">◆</span>
+      <span>Levenslange garantie</span>
+      <span class="marquee-dot">◆</span>
+      <span>Handgemaakt</span>
+      <span class="marquee-dot">◆</span>
+      <span>14 karaat goud</span>
+      <span class="marquee-dot">◆</span>
+      <span>Gecertificeerde diamanten</span>
+      <span class="marquee-dot">◆</span>
+      <span>Gratis cadeau verpakking</span>
+      <span class="marquee-dot">◆</span>
+      <span>Levenslange garantie</span>
+      <span class="marquee-dot">◆</span>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       BESTSELLERS / UITGELICHTE PRODUCTEN
+       Producten worden geladen vanuit Shopify (zie js/shopify.js)
+       Zolang Shopify niet gekoppeld is, worden placeholder kaarten getoond
+  ============================================================ -->
+  <section class="products-section" id="sieraden">
+    <div class="section-header fade-up">
+      <p class="section-eyebrow">Meest geliefd</p>
+      <h2 class="section-title">Bestsellers</h2>
+    </div>
+
+    <!-- Shopify producten worden hier ingeladen via JS -->
+    <div class="products-grid" id="products-grid">
+
+      <!-- Placeholder product kaarten (worden vervangen door Shopify producten) -->
+      <article class="product-card fade-up">
+        <div class="product-img-wrap">
+          <div class="img-placeholder">
+            <span>Product afbeelding<br/>600×750px</span>
+          </div>
+          <!-- <img src="" alt="" loading="lazy" /> -->
+          <button class="product-wishlist" aria-label="Opslaan">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </button>
+          <div class="product-quick-add">
+            <button class="btn-quick-add">Snel toevoegen</button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-material">18k Geelgoud</p>
+          <h3 class="product-name">Diamanten Solitaire Ring</h3>
+          <p class="product-price">€ 349,00</p>
+        </div>
+      </article>
+
+      <article class="product-card fade-up delay-1">
+        <div class="product-img-wrap">
+          <div class="img-placeholder">
+            <span>Product afbeelding<br/>600×750px</span>
+          </div>
+          <button class="product-wishlist" aria-label="Opslaan">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </button>
+          <div class="product-quick-add">
+            <button class="btn-quick-add">Snel toevoegen</button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-material">Sterling Zilver</p>
+          <h3 class="product-name">Delicate Chain Ketting</h3>
+          <p class="product-price">€ 129,00</p>
+        </div>
+      </article>
+
+      <article class="product-card fade-up delay-2">
+        <div class="product-img-wrap">
+          <div class="img-placeholder">
+            <span>Product afbeelding<br/>600×750px</span>
+          </div>
+          <button class="product-wishlist" aria-label="Opslaan">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </button>
+          <div class="product-quick-add">
+            <button class="btn-quick-add">Snel toevoegen</button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-material">14k Rosé Goud</p>
+          <h3 class="product-name">Pearl Drop Oorbellen</h3>
+          <p class="product-price">€ 189,00</p>
+        </div>
+      </article>
+
+      <article class="product-card fade-up delay-3">
+        <div class="product-img-wrap">
+          <div class="img-placeholder">
+            <span>Product afbeelding<br/>600×750px</span>
+          </div>
+          <button class="product-wishlist" aria-label="Opslaan">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </button>
+          <div class="product-quick-add">
+            <button class="btn-quick-add">Snel toevoegen</button>
+          </div>
+        </div>
+        <div class="product-info">
+          <p class="product-material">18k Geelgoud + Diamanten</p>
+          <h3 class="product-name">Tennis Armband</h3>
+          <p class="product-price">€ 589,00</p>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="section-cta fade-up">
+      <a href="#alle-producten" class="btn btn-outline">Bekijk alle sieraden</a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SFEER BANNER — FULL WIDTH AFBEELDING MET TEKST
+       ─────────────────────────────────────────────────────────────
+       HOE AFBEELDING TOEVOEGEN:
+       Zet bestand in: assets/images/sfeer-banner.jpg
+       Minimale resolutie: 2560×1440px (liefst breder voor parallax)
+       Inhoud: model met sieraden, atelier shot, of close-up detail
+  ============================================================ -->
+  <section class="banner-section">
+    <div class="banner-img-wrap">
+      <div class="img-placeholder img-placeholder--wide">
+        <span>Sfeer banner afbeelding — 2560×1440px<br />
+          Zet bestand in: assets/images/sfeer-banner.jpg<br />
+          Inhoud: model met sieraden, sfeervolle lifestyle shot
+        </span>
+      </div>
+      <!-- <img src="assets/images/sfeer-banner.jpg" alt="Lumière sieraden" class="banner-img parallax-img" /> -->
+    </div>
+    <div class="banner-content fade-up">
+      <p class="section-eyebrow light">Tijdloze schoonheid</p>
+      <h2 class="banner-title">"Elk stuk is een<br/><em>klein kunstwerk</em>"</h2>
+      <a href="#collecties" class="btn btn-white">Ontdek meer</a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       OVER ONS / BRAND STORY
+  ============================================================ -->
+  <section class="about-section" id="over-ons">
+    <div class="about-grid">
+
+      <!-- Afbeelding links -->
+      <div class="about-img-wrap fade-up">
+        <div class="img-placeholder img-placeholder--tall">
+          <span>Atelier / brand foto<br />600×800px<br />
+            Zet bestand in: assets/images/over-ons.jpg
+          </span>
+        </div>
+        <!-- <img src="assets/images/over-ons.jpg" alt="Ons atelier" loading="lazy" /> -->
+        <!-- Kleine overlay kaart -->
+        <div class="about-badge">
+          <span class="about-badge-num">10+</span>
+          <span class="about-badge-text">Jaar vakmanschap</span>
+        </div>
+      </div>
+
+      <!-- Tekst rechts -->
+      <div class="about-content fade-up delay-1">
+        <p class="section-eyebrow">Ons verhaal</p>
+        <h2 class="section-title">Gemaakt met<br /><em>liefde en precisie</em></h2>
+        <p class="about-text">
+          Lumière ontstond uit een passie voor ambacht en schoonheid. Elk sieraad wordt met de hand vervaardigd in ons atelier,
+          waarbij we alleen de hoogste kwaliteit materialen gebruiken: gecertificeerde diamanten, 14 en 18 karaat goud,
+          en zorgvuldig geselecteerde edelstenen.
+        </p>
+        <p class="about-text">
+          We geloven dat sieraden meer zijn dan accessoires — het zijn herinneringen, verhalen,
+          en uitdrukkingen van wie je bent.
+        </p>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-num">500+</span>
+            <span class="stat-label">Unieke designs</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">10k+</span>
+            <span class="stat-label">Blije klanten</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Handgemaakt</span>
+          </div>
+        </div>
+        <a href="#collecties" class="btn btn-primary">Ontdek onze collectie</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       USP BLOKKEN (Unique Selling Points)
+  ============================================================ -->
+  <section class="usp-section">
+    <div class="usp-grid">
+
+      <div class="usp-item fade-up">
+        <div class="usp-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+        </div>
+        <h3 class="usp-title">Levenslange garantie</h3>
+        <p class="usp-text">Op elk stuk dat we maken, geven we levenslange garantie op vakmanschap.</p>
+      </div>
+
+      <div class="usp-item fade-up delay-1">
+        <div class="usp-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+          </svg>
+        </div>
+        <h3 class="usp-title">Gratis verzending</h3>
+        <p class="usp-text">Gratis en verzekerde verzending bij bestellingen boven €75 binnen Nederland.</p>
+      </div>
+
+      <div class="usp-item fade-up delay-2">
+        <div class="usp-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/>
+          </svg>
+        </div>
+        <h3 class="usp-title">Luxe cadeauverpakking</h3>
+        <p class="usp-text">Elk sieraad wordt geleverd in onze signature luxe giftbox — gratis.</p>
+      </div>
+
+      <div class="usp-item fade-up delay-3">
+        <div class="usp-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </div>
+        <h3 class="usp-title">Persoonlijk advies</h3>
+        <p class="usp-text">Onze sieraden specialisten helpen je met plezier bij het kiezen van het perfecte stuk.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       INSTAGRAM FEED PLACEHOLDER
+       ─────────────────────────────────────────────────────────────
+       HOE INSTAGRAM KOPPELEN:
+       Gebruik een tool zoals Instafeed.js of een Shopify Instagram app.
+       De 6 placeholder vakken hieronder worden dan vervangen door echte posts.
+       Voeg je Instagram handle toe in js/main.js onder "INSTAGRAM CONFIG"
+  ============================================================ -->
+  <section class="instagram-section">
+    <div class="section-header fade-up">
+      <p class="section-eyebrow">Volg ons</p>
+      <h2 class="section-title">@lumiere.jewellery</h2>
+      <p class="instagram-subtitle">Deel jouw look en tag ons</p>
+    </div>
+
+    <div class="instagram-grid" id="instagram-feed">
+      <!-- Worden vervangen door echte Instagram posts via JS/app -->
+      <div class="instagram-item fade-up">
+        <div class="img-placeholder img-placeholder--square">
+          <span>Instagram post</span>
+        </div>
+        <div class="instagram-overlay">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </div>
+      </div>
+      <div class="instagram-item fade-up delay-1">
+        <div class="img-placeholder img-placeholder--square"><span>Instagram post</span></div>
+        <div class="instagram-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+      </div>
+      <div class="instagram-item fade-up delay-2">
+        <div class="img-placeholder img-placeholder--square"><span>Instagram post</span></div>
+        <div class="instagram-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+      </div>
+      <div class="instagram-item fade-up delay-3">
+        <div class="img-placeholder img-placeholder--square"><span>Instagram post</span></div>
+        <div class="instagram-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+      </div>
+      <div class="instagram-item fade-up">
+        <div class="img-placeholder img-placeholder--square"><span>Instagram post</span></div>
+        <div class="instagram-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+      </div>
+      <div class="instagram-item fade-up delay-1">
+        <div class="img-placeholder img-placeholder--square"><span>Instagram post</span></div>
+        <div class="instagram-overlay"><svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       NIEUWSBRIEF AANMELDING
+  ============================================================ -->
+  <section class="newsletter-section">
+    <div class="newsletter-inner fade-up">
+      <p class="section-eyebrow light">Blijf op de hoogte</p>
+      <h2 class="newsletter-title">Word lid van onze wereld</h2>
+      <p class="newsletter-subtitle">
+        Ontvang als eerste nieuws over nieuwe collecties, exclusieve aanbiedingen en sieraden tips.
+      </p>
+      <form class="newsletter-form" id="newsletter-form">
+        <div class="newsletter-input-wrap">
+          <input
+            type="email"
+            placeholder="Jouw e-mailadres"
+            class="newsletter-input"
+            id="newsletter-email"
+            required
+          />
+          <button type="submit" class="btn btn-primary newsletter-btn">Aanmelden</button>
+        </div>
+        <p class="newsletter-disclaimer">
+          Door je aan te melden ga je akkoord met onze <a href="#privacy">privacyverklaring</a>.
+          Je kunt je altijd afmelden.
+        </p>
+      </form>
+      <p class="newsletter-success" id="newsletter-success">
+        Bedankt! Je bent aangemeld. ✦
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="site-footer">
+    <div class="footer-top">
+
+      <!-- Brand kolom -->
+      <div class="footer-col footer-brand">
+        <a href="/" class="footer-logo">
+          <span class="logo-text">LUMIÈRE</span>
+          <span class="logo-sub">Fine Jewellery</span>
+        </a>
+        <p class="footer-tagline">
+          Handgemaakt vakmanschap.<br />Tijdloze schoonheid.
+        </p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram" class="social-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Pinterest" class="social-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2C6.48 2 2 6.48 2 12c0 4.24 2.65 7.86 6.39 9.29-.09-.78-.17-1.98.04-2.83.18-.77 1.22-5.17 1.22-5.17s-.31-.62-.31-1.54c0-1.45.84-2.53 1.88-2.53.89 0 1.32.67 1.32 1.47 0 .9-.57 2.24-.87 3.48-.25 1.04.52 1.88 1.54 1.88 1.85 0 3.27-1.95 3.27-4.76 0-2.49-1.79-4.23-4.34-4.23-2.96 0-4.7 2.22-4.7 4.51 0 .89.34 1.85.77 2.37.08.1.09.19.07.29-.08.32-.25 1.04-.29 1.18-.05.19-.16.23-.37.14-1.39-.65-2.26-2.68-2.26-4.32 0-3.51 2.55-6.74 7.36-6.74 3.86 0 6.86 2.75 6.86 6.42 0 3.83-2.41 6.91-5.76 6.91-1.13 0-2.19-.59-2.55-1.28l-.69 2.59c-.25.97-.93 2.18-1.39 2.92.05.01.1.02.15.03C12.07 22 12 22 12 22c-5.52 0-10-4.48-10-10S6.48 2 12 2z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="TikTok" class="social-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Sieraden kolom -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Sieraden</h4>
+        <ul class="footer-links">
+          <li><a href="#ringen">Ringen</a></li>
+          <li><a href="#kettingen">Kettingen</a></li>
+          <li><a href="#oorbellen">Oorbellen</a></li>
+          <li><a href="#armbanden">Armbanden</a></li>
+          <li><a href="#cadeaus">Cadeaus</a></li>
+          <li><a href="#nieuw">Nieuw</a></li>
+        </ul>
+      </div>
+
+      <!-- Info kolom -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Informatie</h4>
+        <ul class="footer-links">
+          <li><a href="#over-ons">Over ons</a></li>
+          <li><a href="#duurzaamheid">Duurzaamheid</a></li>
+          <li><a href="#vakmanschap">Vakmanschap</a></li>
+          <li><a href="#maatgids">Maatgids</a></li>
+          <li><a href="#blog">Journal</a></li>
+        </ul>
+      </div>
+
+      <!-- Klantenservice kolom -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Klantenservice</h4>
+        <ul class="footer-links">
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#verzending">Verzending & retour</a></li>
+          <li><a href="#garantie">Garantie</a></li>
+          <li><a href="#onderhoud">Sieraden onderhoud</a></li>
+          <li><a href="#faq">Veelgestelde vragen</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Footer bottom -->
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Lumière Fine Jewellery. Alle rechten voorbehouden.</p>
+      <div class="footer-legal">
+        <a href="#privacy">Privacybeleid</a>
+        <a href="#cookies">Cookiebeleid</a>
+        <a href="#algemene-voorwaarden">Algemene voorwaarden</a>
+      </div>
+      <!-- Betaalopties icoontjes -->
+      <div class="footer-payment">
+        <span class="payment-icon">iDEAL</span>
+        <span class="payment-icon">Visa</span>
+        <span class="payment-icon">Mastercard</span>
+        <span class="payment-icon">PayPal</span>
+        <span class="payment-icon">Klarna</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       ZOEK OVERLAY
+  ============================================================ -->
+  <div class="search-overlay" id="search-overlay">
+    <button class="search-close" id="search-close" aria-label="Sluiten">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <div class="search-inner">
+      <p class="search-label">Waar ben je naar op zoek?</p>
+      <input type="search" class="search-input" id="search-input" placeholder="Zoek op sieraad, materiaal of collectie..." />
+      <div class="search-suggestions">
+        <p class="search-suggestions-title">Populaire zoekopdrachten</p>
+        <div class="search-tags">
+          <button class="search-tag">Diamanten ring</button>
+          <button class="search-tag">Gouden ketting</button>
+          <button class="search-tag">Cadeau</button>
+          <button class="search-tag">Oorbellen goud</button>
+        </div>
+      </div>
+      <div class="search-results" id="search-results"></div>
+    </div>
+  </div>
+
+  <script src="js/shopify.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

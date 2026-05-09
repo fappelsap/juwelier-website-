@@ -1,0 +1,264 @@
+/* ============================================================
+   LUMIÈRE — Animations & Scroll Effects
+   ============================================================ */
+
+/* ── Fade Up (scroll triggered via Intersection Observer in main.js) ── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Stagger delays ── */
+.delay-1 { transition-delay: 120ms; }
+.delay-2 { transition-delay: 240ms; }
+.delay-3 { transition-delay: 360ms; }
+.delay-4 { transition-delay: 480ms; }
+
+/* ── Hero entrance animations (auto, no scroll trigger needed) ── */
+.hero-eyebrow {
+  animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}
+
+.hero-title {
+  animation: heroFadeUp 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
+}
+
+.hero-subtitle {
+  animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.75s both;
+}
+
+.hero-buttons {
+  animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.95s both;
+}
+
+.scroll-indicator {
+  animation: heroFadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 1.4s both;
+}
+
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Text reveal (letter by letter, voor speciale titels) ── */
+.text-reveal {
+  overflow: hidden;
+}
+
+.text-reveal span {
+  display: inline-block;
+  transform: translateY(100%);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.text-reveal.visible span {
+  transform: translateY(0);
+}
+
+/* ── Parallax klasse (wordt gestuurd via JS) ── */
+.parallax-img {
+  will-change: transform;
+}
+
+/* ── Announcement bar slide in ── */
+.announcement-bar {
+  animation: slideDown 0.6s ease 0s both;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+/* ── Nav logo entrance ── */
+.nav-logo {
+  animation: navFade 0.8s ease 0.2s both;
+}
+
+.nav-left {
+  animation: navFade 0.8s ease 0.1s both;
+}
+
+.nav-right {
+  animation: navFade 0.8s ease 0.3s both;
+}
+
+@keyframes navFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ── Marquee hover pause ── */
+.marquee-section:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* ── Product card hover glow ── */
+.product-card {
+  transition: box-shadow var(--transition-base);
+}
+
+.product-card:hover {
+  box-shadow: 0 12px 40px rgba(0,0,0,0.10);
+}
+
+/* ── Collection card shimmer on load ── */
+@keyframes shimmer {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+.img-placeholder.loading {
+  background: linear-gradient(
+    90deg,
+    var(--cream-dark) 25%,
+    var(--cream) 50%,
+    var(--cream-dark) 75%
+  );
+  background-size: 800px 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+/* ── USP icon rotate on hover ── */
+.usp-icon svg {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.usp-item:hover .usp-icon svg {
+  transform: rotate(8deg) scale(1.1);
+}
+
+/* ── Button ripple effect ── */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.12);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.btn:hover::before {
+  transform: scaleX(1);
+}
+
+/* ── Page load fade ── */
+body {
+  animation: pageFade 0.4s ease both;
+}
+
+@keyframes pageFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ── Mobile menu items stagger ── */
+.mobile-nav-links li {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.mobile-menu.open .mobile-nav-links li:nth-child(1) { opacity: 1; transform: none; transition-delay: 0.1s; }
+.mobile-menu.open .mobile-nav-links li:nth-child(2) { opacity: 1; transform: none; transition-delay: 0.18s; }
+.mobile-menu.open .mobile-nav-links li:nth-child(3) { opacity: 1; transform: none; transition-delay: 0.26s; }
+.mobile-menu.open .mobile-nav-links li:nth-child(4) { opacity: 1; transform: none; transition-delay: 0.34s; }
+
+/* ── Scroll line animation ── */
+.scroll-indicator {
+  animation: heroFadeUp 1s ease 1.4s both;
+}
+
+/* ── Footer links underline animation ── */
+.footer-links a {
+  position: relative;
+}
+
+.footer-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: rgba(255,255,255,0.5);
+  transition: width 0.3s ease;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+/* ── Search overlay ── */
+.search-overlay {
+  transition: opacity 0.3s ease;
+}
+
+.search-inner {
+  animation: searchSlide 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-play-state: paused;
+}
+
+.search-overlay.open .search-inner {
+  animation-play-state: running;
+}
+
+@keyframes searchSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Wishlist heart fill animation ── */
+.product-wishlist svg {
+  transition: fill 0.2s ease, stroke 0.2s ease;
+}
+
+.product-wishlist.active svg {
+  fill: var(--tiffany);
+  stroke: var(--tiffany);
+}
+
+/* ── Newsletter form focus ── */
+.newsletter-input-wrap {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.newsletter-input-wrap:focus-within {
+  border-color: var(--tiffany);
+  box-shadow: 0 0 0 3px rgba(10, 186, 181, 0.15);
+}
+
+/* ── Smooth image reveal on load ── */
+img {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+img.loaded {
+  opacity: 1;
+}
