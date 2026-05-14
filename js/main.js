@@ -182,13 +182,13 @@ document.addEventListener('DOMContentLoaded', () => {
       // Sla op in localStorage
       const productName = btn.closest('.product-card')?.querySelector('.product-name')?.textContent;
       if (productName) {
-        let wishlist = JSON.parse(localStorage.getItem('lumiere_wishlist') || '[]');
+        let wishlist = JSON.parse(localStorage.getItem('moshie_wishlist') || '[]');
         if (btn.classList.contains('active')) {
           wishlist.push(productName);
         } else {
           wishlist = wishlist.filter(item => item !== productName);
         }
-        localStorage.setItem('lumiere_wishlist', JSON.stringify(wishlist));
+        localStorage.setItem('moshie_wishlist', JSON.stringify(wishlist));
       }
     });
   });

@@ -22,8 +22,8 @@
    ============================================================ */
 
 const SHOPIFY_CONFIG = {
-  domain: 'JOUW-WINKEL.myshopify.com',       // ← Aanpassen
-  storefrontToken: 'JOUW-STOREFRONT-TOKEN',  // ← Aanpassen
+  domain: 'moshie-jewelry.myshopify.com',       // ← Aanpassen
+  storefrontToken: '8c4c7fec402b58d63daced03cef72226',
   apiVersion: '2025-01',
 };
 
@@ -199,7 +199,7 @@ async function loadBestsellers() {
 let cart = { id: null, lines: [] };
 
 async function getOrCreateCart() {
-  const savedCartId = localStorage.getItem('lumiere_cart_id');
+  const savedCartId = localStorage.getItem('moshie_cart_id');
 
   if (savedCartId) {
     const data = await shopifyFetch(`
@@ -239,7 +239,7 @@ async function getOrCreateCart() {
   const data = await shopifyFetch(`
     mutation cartCreate {
       cartCreate {
-        cart { id totalQuantity }
+        cart { id totalQuantity checkoutUrl }
         userErrors { field message }
       }
     }
@@ -247,7 +247,8 @@ async function getOrCreateCart() {
 
   if (data?.cartCreate?.cart) {
     cart = data.cartCreate.cart;
-    localStorage.setItem('lumiere_cart_id', cart.id);
+    localStorage.setItem('moshie_cart_id', cart.id);
+    localStorage.setItem('moshie_checkout_url', cart.checkoutUrl);
     updateCartCount(0);
   }
 
@@ -263,6 +264,7 @@ async function addToCart(variantId, quantity = 1) {
         cart {
           id
           totalQuantity
+          checkoutUrl
         }
         userErrors { field message }
       }
@@ -276,6 +278,7 @@ async function addToCart(variantId, quantity = 1) {
     cart = data.cartLinesAdd.cart;
     updateCartCount(cart.totalQuantity);
     showCartNotification();
+    if (cart.checkoutUrl) localStorage.setItem('moshie_checkout_url', cart.checkoutUrl);
   }
 }
 
@@ -387,7 +390,7 @@ searchInput?.addEventListener('input', (e) => {
 /* ── Init ── */
 document.addEventListener('DOMContentLoaded', () => {
   // Initialiseer cart count
-  const savedCartId = localStorage.getItem('lumiere_cart_id');
+  const savedCartId = localStorage.getItem('moshie_cart_id');
   if (savedCartId && SHOPIFY_CONFIG.domain !== 'JOUW-WINKEL.myshopify.com') {
     getOrCreateCart();
   }
